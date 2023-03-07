@@ -1,0 +1,41 @@
+{
+    "name": "IGTools",
+    "version": "1.0",
+    "description": "Tools for instagram as Google Chrome Extension!",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "js/background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+              "js/axios.js", "js/vue.js", "js/vuex.js", "js/vuetify.js", "js/app.js"
+            ],
+            "css": [
+                "css/bootstrap.css"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "images/img16.png",
+            "32": "images/img16.png",
+            "48": "images/img16.png",
+            "128": "images/img16.png"
+        }
+    },
+    "icons": {
+        "16": "images/img16.png",
+        "32": "images/img16.png",
+        "48": "images/img16.png",
+        "128": "images/img16.png"
+    },
+    "permissions": [
+        "unlimitedStorage"
+    ]
+}
